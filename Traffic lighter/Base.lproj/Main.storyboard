@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_lighter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xAF-BM-yWb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twR-xP-dGc" userLabel="Blue">
+                                <rect key="frame" x="20" y="64" width="335" height="337"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-2N-ACN" userLabel="Green">
+                                <rect key="frame" x="20" y="421" width="335" height="337"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZP-66-TQG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="twR-xP-dGc" firstAttribute="top" secondItem="KZP-66-TQG" secondAttribute="top" constant="20" id="9iF-4T-Gs2"/>
+                            <constraint firstItem="bNd-2N-ACN" firstAttribute="width" secondItem="twR-xP-dGc" secondAttribute="width" id="Ce5-Ru-Bjh"/>
+                            <constraint firstItem="bNd-2N-ACN" firstAttribute="leading" secondItem="KZP-66-TQG" secondAttribute="leading" constant="20" id="HNX-3W-eVN"/>
+                            <constraint firstItem="twR-xP-dGc" firstAttribute="height" secondItem="bNd-2N-ACN" secondAttribute="height" id="Qj9-3v-W8k" userLabel="View.height = View.height"/>
+                            <constraint firstItem="KZP-66-TQG" firstAttribute="trailing" secondItem="bNd-2N-ACN" secondAttribute="trailing" constant="20" id="QxC-No-PWD"/>
+                            <constraint firstItem="twR-xP-dGc" firstAttribute="width" secondItem="bNd-2N-ACN" secondAttribute="width" id="ibo-4Q-on3"/>
+                            <constraint firstItem="bNd-2N-ACN" firstAttribute="bottom" secondItem="KZP-66-TQG" secondAttribute="bottom" constant="-20" id="n81-2g-16D" userLabel="Green.bottom = Safe Area.bottom"/>
+                            <constraint firstItem="twR-xP-dGc" firstAttribute="leading" secondItem="KZP-66-TQG" secondAttribute="leading" constant="20" id="sob-Xz-iZt" userLabel="Blue.height = Green.height"/>
+                            <constraint firstItem="bNd-2N-ACN" firstAttribute="top" secondItem="twR-xP-dGc" secondAttribute="bottom" constant="20" id="tek-YV-s7E" userLabel="Green.top = Blue.bottom + 20"/>
+                            <constraint firstItem="KZP-66-TQG" firstAttribute="trailing" secondItem="twR-xP-dGc" secondAttribute="trailing" constant="20" id="zmI-p1-iNY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="120.28985507246378" y="117.1875"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
